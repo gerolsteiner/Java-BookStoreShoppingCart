@@ -83,6 +83,10 @@ public class CartController extends HttpServlet {
    shoppingCart.addCartItem(existingBook, quantity);
   }
 
+  protected void deleteFromCart(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+  }
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
