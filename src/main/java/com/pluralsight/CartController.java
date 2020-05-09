@@ -102,6 +102,10 @@ public class CartController extends HttpServlet {
     }
   }
 
+  protected void updateCart(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+  }
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
