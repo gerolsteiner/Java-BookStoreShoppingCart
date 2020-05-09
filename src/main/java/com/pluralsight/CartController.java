@@ -111,6 +111,9 @@ public class CartController extends HttpServlet {
 
     String indexStr = request.getParameter("index");
     int index = Integer.parseInt(indexStr);
+
+    String quantityStr = request.getParameter("quantity");
+    int quantity = Integer.parseInt(quantityStr);
   }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
