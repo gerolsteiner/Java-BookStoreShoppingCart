@@ -114,6 +114,9 @@ public class CartController extends HttpServlet {
 
     String quantityStr = request.getParameter("quantity");
     int quantity = Integer.parseInt(quantityStr);
+
+    ShoppingCart shoppingCart = null;
+    Object objCartBean = session.getAttribute("cart");
   }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
