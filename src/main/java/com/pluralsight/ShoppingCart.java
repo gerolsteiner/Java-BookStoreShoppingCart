@@ -23,12 +23,14 @@ public class ShoppingCart {
  }
 
  public void updateCartItem(int index, int quantity) {
+  if (index < cartItems.size()) {
+   cartItems.get(index).setQuantity(quantity);
+  }
  }
 
  public void deleteCartItem(int index) {
-  try {
+  if (index < cartItems.size()) {
    cartItems.remove(index);
-  } catch (IndexOutOfBoundsException ex) {
   }
  }
 
