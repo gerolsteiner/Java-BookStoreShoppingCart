@@ -98,6 +98,7 @@ public class CartController extends HttpServlet {
 
     if (objCartBean instanceof ShoppingCart) {
       shoppingCart = (ShoppingCart) objCartBean;
+      shoppingCart.deleteCartItem(index);
     }
   }
 
