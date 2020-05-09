@@ -107,6 +107,7 @@ public class CartController extends HttpServlet {
 
   protected void updateCart(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
+    HttpSession session = request.getSession();
   }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
