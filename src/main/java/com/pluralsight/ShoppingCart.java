@@ -22,6 +22,9 @@ public class ShoppingCart {
   cartItems.add(cartItem);
  }
 
+ public void updateCartItem(int index, int quantity) {
+ }
+
  public void deleteCartItem(int index) {
   try {
    cartItems.remove(index);
