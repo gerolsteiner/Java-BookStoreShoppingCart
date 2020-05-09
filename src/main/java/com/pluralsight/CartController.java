@@ -89,8 +89,16 @@ public class CartController extends HttpServlet {
   protected void deleteFromCart(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
     HttpSession session = request.getSession();
+
     String indexStr = request.getParameter("index");
     int index = Integer.parseInt(indexStr);
+
+    ShoppingCart shoppingCart = null;
+    Object objCartBean = session.getAttribute("cart");
+
+    if (objCartBean instanceof ShoppingCart) {
+      shoppingCart = (ShoppingCart) objCartBean;
+    }
   }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
