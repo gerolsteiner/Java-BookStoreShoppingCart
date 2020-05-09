@@ -23,6 +23,10 @@ public class ShoppingCart {
  }
 
  public void deleteCartItem(int index) {
+  try {
+   cartItems.remove(index);
+  } catch (IndexOutOfBoundsException ex) {
+  }
  }
 
  public CartItem getCartItem(int iItemIndex) {
