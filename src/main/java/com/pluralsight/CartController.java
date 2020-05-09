@@ -117,6 +117,11 @@ public class CartController extends HttpServlet {
 
     ShoppingCart shoppingCart = null;
     Object objCartBean = session.getAttribute("cart");
+
+    if (objCartBean instanceof ShoppingCart) {
+      shoppingCart = (ShoppingCart) objCartBean;
+      shoppingCart.updateCartItem(index, quantity);
+    }
   }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
